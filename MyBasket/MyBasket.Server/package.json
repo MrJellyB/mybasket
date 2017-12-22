@@ -1,0 +1,9 @@
+{
+  "name": "my-basket.server",
+  "version": "0.0.0",
+  "description": "MyBasket.Server",
+  "main": "server.js",
+  "author": {
+    "name": "liorstrongxd"
+  }
+}

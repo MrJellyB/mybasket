@@ -30,6 +30,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MyBasket.UI", "MyBasket.UI\
 		SlnRelativePath = "MyBasket.UI\"
 	EndProjectSection
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "MyBasket.Server", "MyBasket.Server\MyBasket.Server.njsproj", "{3844A231-6D36-48A7-9FB2-22A61DC4B17F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{16C99CE1-CF28-4930-A449-E67DD5651DFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16C99CE1-CF28-4930-A449-E67DD5651DFB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{16C99CE1-CF28-4930-A449-E67DD5651DFB}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{3844A231-6D36-48A7-9FB2-22A61DC4B17F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3844A231-6D36-48A7-9FB2-22A61DC4B17F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3844A231-6D36-48A7-9FB2-22A61DC4B17F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3844A231-6D36-48A7-9FB2-22A61DC4B17F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
