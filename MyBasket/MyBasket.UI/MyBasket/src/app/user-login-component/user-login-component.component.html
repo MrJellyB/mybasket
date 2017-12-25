@@ -1,9 +1,8 @@
-<form id=userlogin (ngSubmit)="login()" >
+<form id=userlogin (ngSubmit)="ConnectUser(userEmail,userPassword)" >
   <h1>התחברות לאתר</h1>
   <div>
-    משתמש: 
-    <input type="email" #userEmail />
-    ססמא: <input type="password" />
+    <input type="email" placeholder="משתמש:" #userEmail />
+    <input type="password" placeholder="ססמא:" #userEmail />
   </div>
   <div>
     <button type="submit">היכנס</button>
