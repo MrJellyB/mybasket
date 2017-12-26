@@ -1,3 +1,11 @@
-<p>
-  user-login-component works!
-</p>
+<form id=userlogin (ngSubmit)="login()" >
+  <h1>התחברות לאתר</h1>
+  <div>
+    משתמש: 
+    <input type="email" #userEmail />
+    ססמא: <input type="password" />
+  </div>
+  <div>
+    <button type="submit">היכנס</button>
+  </div>
+</form>
