@@ -6,14 +6,14 @@ import { USERS } from './mock-users';
 @Injectable()
 export class UsersServiceService {
 
-  constructor(private http:Http) { }
+  // constructor(private http:Http) { }
 
   getUsers(): User[] {
     return USERS;
   }
 
   login(userName:string, password:string) {
-    HttpModule.
+    // HttpModule.
   }
 
 }
