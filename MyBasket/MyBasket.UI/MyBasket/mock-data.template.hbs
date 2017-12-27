@@ -2,13 +2,13 @@
   "users": [
     {{#repeat 20}}
     {
-      "id": {{@index}},
-      "name": "{{firstName}} {{lastName}}",
-      "work": "{{company}}",
-      "email": "{{email}}",
-      "dob": "{{date '1900' '2000' 'YYYY'}}",
-      "address": "{{int 1 100}} {{street}}",
-      "city": "{{city}}"
+      id: {{@index}},
+      name: "{{firstName}} {{lastName}}",
+      work: "{{company}}",
+      email: "{{email}}",
+      dob: "{{date '1900' '2000' 'YYYY'}}",
+      address: "{{int 1 100}} {{street}}",
+      city: "{{city}}"
     }
     {{/repeat}}
   ]
