@@ -23,6 +23,7 @@
     "@angular/router": "^5.0.0",
     "core-js": "^2.4.1",
     "dummy-json": "^2.0.0",
+    "fs": "^0.0.1-security",
     "global": "^4.3.2",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"
