@@ -8,10 +8,11 @@ using NHibernate;
 
 namespace MyBasket.DAL
 {
-    public class checknHibernate
+    public class runClass
     {
         static void Main(string[] args)
         {
+            /*
             string nId = "1";
             ISession session = NHibernateHelper.GetCurrentSession();
             IQuery query = session.CreateQuery("FROM FinalProject.dbo.BS_PRODUCT_TB WHERE Id = 1");
@@ -23,6 +24,9 @@ namespace MyBasket.DAL
             else
                 Console.WriteLine("Found " + acc[0].Id);
 
+            Console.ReadKey();*/
+
+            bl bl = new bl();
             Console.ReadKey();
         }
     }

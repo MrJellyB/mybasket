@@ -45,5 +45,6 @@ app.get('/getUsers', function(req, res) {
     userCollections.find({}).toArray(function (err, result) {
         if (err) throw err;
         console.log(result);
+        res.send(result);
     });
 })
