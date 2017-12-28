@@ -8,10 +8,25 @@ import { UsersServiceService } from '../users-service.service';
 })
 export class UserLoginComponent implements OnInit {
 
-  constructor(private userService: UsersServiceService) { }
+  errorConnecting:boolean;
+
+  constructor(private userService: UsersServiceService) { 
+    this.errorConnecting = false;
+  }
 
   ngOnInit() {
     this.userService.getUsers();
   }
 
+  login(email, password) {
+    this.userService.login(email, password).then(
+      (result) => {
+        // TODO: add here a router redirection to main page with the user credentials
+        // (result) ? 
+      },
+    (err) => {
+      // Write an error through the alerting service
+
+    });
+  }
 }

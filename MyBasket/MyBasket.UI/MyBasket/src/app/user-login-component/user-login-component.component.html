@@ -2,9 +2,10 @@
   <h1>התחברות לאתר</h1>
   <div>
     <input type="email" placeholder="משתמש:" #userEmail />
-    <input type="password" placeholder="ססמא:" #userEmail />
+    <input type="password" placeholder="ססמא:" #userPassword />
   </div>
   <div>
     <button type="submit">היכנס</button>
   </div>
+  <div ng-hide="errorConnecting">שם משתמש או ססמא לא נכונים !</div>
 </form>

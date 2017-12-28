@@ -12,9 +12,10 @@ export class UsersServiceService {
     return USERS;
   }
 
-  login(userName:string, password:string) {
+  login(userName:string, password:string) : Promise<boolean> {
     // TODO: add here the http call to the server (meanwhile make a mock)
     // this.http.get()
+    return Promise.resolve(true);
   }
 
 }
