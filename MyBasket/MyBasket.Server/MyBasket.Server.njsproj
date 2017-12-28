@@ -28,9 +28,31 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\BL\modules\basketModule.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\BL\DAL\database.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\BL\routes.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="config\consts.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainServer.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="server.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\BL\" />
+    <Folder Include="app\BL\DAL\" />
+    <Folder Include="app\" />
+    <Folder Include="app\BL\modules\" />
+    <Folder Include="config\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
