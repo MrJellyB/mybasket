@@ -13,3 +13,12 @@ exports.getUsers = function (req, res) {
         res.send(results);
     })
 }
+
+exports.login = function (req, res) {
+    var email = req.params.email;
+    var password = req.params.password;
+
+    dbUtils.login(email, password, function (err, data) {
+        res.send(data);
+    })
+}

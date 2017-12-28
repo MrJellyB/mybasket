@@ -35,3 +35,11 @@ exports.setupDB = function (dbUrl, con, p_db, callback) {
 exports.getUsers = function (callback) {
     db.users.find({}).toArray(callback);
 }
+
+exports.login = function (email, password, callback) {
+    console.log("email= " + email + " and password= " + password);
+
+    db.users.find({ "email": email, "password": password }).toArray(callback);
+
+    //console.log(email);
+}
