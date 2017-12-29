@@ -14,6 +14,10 @@ var MONGO_URL = 'mongodb://localhost:27017';
 // get the app from the express
 var app = express();
 
+// config app to use post api
+app.use( bodyParser.json() );
+app.use(bodyParser.urlencoded({extended: false}));
+
 // set up to db
 dbUtils.setupDB(MONGO_URL, consts, route, function (p_db) {
 

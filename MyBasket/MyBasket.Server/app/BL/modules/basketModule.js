@@ -15,10 +15,12 @@ exports.getUsers = function (req, res) {
 }
 
 exports.login = function (req, res) {
-    var email = req.params.email;
-    var password = req.params.password;
+    var email = req.body.email;
+    var password = req.body.password;
 
     dbUtils.login(email, password, function (err, data) {
-        res.send(data);
+        //res.send(data);
+
+        res.send((data && Object.keys(data).length !== 0));
     })
 }

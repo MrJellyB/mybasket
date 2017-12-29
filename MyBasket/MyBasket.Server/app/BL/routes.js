@@ -4,6 +4,7 @@
     basketModule.setup(dbUtils);
 
     app.get('/getUsers', basketModule.getUsers);
-    app.get('/login/:email/:password', basketModule.login);
+    // app.get('/login/:email/:password', basketModule.login);
+    app.post('/login', basketModule.login);
 
 }
