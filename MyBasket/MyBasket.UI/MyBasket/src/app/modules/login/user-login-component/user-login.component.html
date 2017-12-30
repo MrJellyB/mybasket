@@ -7,5 +7,6 @@
   <div>
     <button type="submit" ngSu>היכנס</button>
   </div>
-  <div [hidden]="errorConnecting">שם משתמש או ססמא לא נכונים !</div>
+  <div [hidden]="!errorConnecting">שם משתמש או ססמא לא נכונים !</div>
+  <div>{{isCurrentDetails}}</div>
 </form>

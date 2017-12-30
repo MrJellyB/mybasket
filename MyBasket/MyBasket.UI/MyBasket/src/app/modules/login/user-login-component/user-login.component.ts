@@ -10,7 +10,8 @@ import { FormGroup } from '@angular/forms';
 export class UserLoginComponent implements OnInit {
 
   errorConnecting:boolean;
-  model:any = {};
+  model: any = {};
+  isCurrentDetails: string;
 
   constructor(private userService: UsersServiceService) {
     this.errorConnecting = false;
@@ -20,20 +21,6 @@ export class UserLoginComponent implements OnInit {
     this.userService.getUsers();
   }
 
-  // login(email, password) {
-  //   event.preventDefault();
-  //   this.userService.login(email, password).then(
-  //     (result) => {
-  //       // TODO: add here a router redirection to main page with the user credentials
-  //       // (result) ?
-  //       console.log('connected');
-  //     },
-  //   (err) => {
-  //     // Write an error through the alerting service
-  //     console.log('error:' + err);
-  //   });
-  // }
-
   onSubmit(userloginForm:any, event:Event) {
     event.preventDefault();
 
@@ -42,12 +29,18 @@ export class UserLoginComponent implements OnInit {
     this.userService.login(this.model.userName, this.model.password).subscribe(
       (result) => {
         // TODO: add here a router redirection to main page with the user credentials
-        // (result) ?
-        console.log('connected');
+        if (result) {
+          this.isCurrentDetails = "התחבר למשתמש";
+          this.errorConnecting = false;
+        }
+        else {
+          this.isCurrentDetails = "פרטי המשתמש שגויים";
+          this.errorConnecting = true;
+        }
       },
     (err) => {
-      // Write an error through the alerting service
       console.log('error:' + err);
+      this.errorConnecting = true;
     });
   }
 }
