@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { UsersServiceService } from '../users-service.service';
 
 @Component({
-  selector: 'app-user-login-component',
-  templateUrl: './user-login-component.component.html',
-  styleUrls: ['./user-login-component.component.css']
+  selector: 'app-user-login',
+  templateUrl: './user-login.component.html',
+  styleUrls: ['./user-login.component.css']
 })
 export class UserLoginComponent implements OnInit {
 
   errorConnecting:boolean;
 
-  constructor(private userService: UsersServiceService) { 
+  constructor(private userService: UsersServiceService) {
     this.errorConnecting = false;
   }
 
@@ -22,7 +22,7 @@ export class UserLoginComponent implements OnInit {
     this.userService.login(email, password).then(
       (result) => {
         // TODO: add here a router redirection to main page with the user credentials
-        // (result) ? 
+        // (result) ?
       },
     (err) => {
       // Write an error through the alerting service
