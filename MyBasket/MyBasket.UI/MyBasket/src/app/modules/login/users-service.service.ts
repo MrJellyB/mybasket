@@ -29,4 +29,7 @@ export class UsersServiceService {
     // return Promise.resolve(true);
   }
 
+  register(): Promise<boolean> {
+    return Promise.resolve(true);
+  }
 }
