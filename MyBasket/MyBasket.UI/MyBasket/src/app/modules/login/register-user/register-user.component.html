@@ -15,6 +15,21 @@
           <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" required />
         </div>
 
+        <!--
+        <div class="form-group">
+          <label for="gender">מין</label>
+          <input type="radio" id="male"
+                 name="contact" value="male" [(ngModel)]="model.male" #male="ngModel">
+          <label for="male">זכר</label>
+
+          <input type="radio" id="female"
+                 name="contact" value="female" [(ngModel)]="model.female" #female="ngModel">
+          <label for="female">נקבה</label>
+        </div>
+          -->
+
+        <label class="checkbox-inline"><input type="checkbox" value="">זכר</label>
+        <label class="checkbox-inline"><input type="checkbox" value="">נקבה</label>
      <h3>התחברות לאתר</h3>
         <div class="form-group">
           <label for="username">שם משתמש</label>
