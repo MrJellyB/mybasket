@@ -1,4 +1,4 @@
-import { User } from './user-login-component/User';
+import { User } from './modules/login/user-login-component/User';
 import dummyjson = require("dummy-json");
 
 

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from './user-login-component/User';
-import { USERS } from './mock-users';
+//import { USERS } from './mock-users';
+import { USERS } from '../../mock-users';
 import { Headers, Http } from '@angular/http';
 
 @Injectable()
