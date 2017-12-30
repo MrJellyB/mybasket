@@ -5,7 +5,7 @@
   <div class="col-md-5 col-md-offset-6">
     <h2>הרשמה לאתר</h2>
     <h3>פרטים בסיסיים</h3>
-      <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit(f,$event)" #f="ngForm" novalidate>
         <div class="form-group">
           <label for="firstName">שם פרטי</label>
           <input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel" required />
