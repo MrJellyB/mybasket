@@ -10,7 +10,7 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./register-user.component.css']
 })
 export class RegisterUserComponent implements OnInit {
-
+  model: any = {};
   loading = false;
 
   constructor(private router: Router,
