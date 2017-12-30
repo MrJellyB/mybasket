@@ -21,13 +21,13 @@ export class RegisterUserComponent implements OnInit {
 
   register() {
     this.loading = true;
-
+    /*
     this.userService.register().then(
       (result) => {
         // if successful
       },
       (err) => {
         // if get error
-      });
+      });*/
   }
 }
