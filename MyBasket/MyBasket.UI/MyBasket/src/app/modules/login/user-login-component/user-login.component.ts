@@ -18,15 +18,31 @@ export class UserLoginComponent implements OnInit {
     this.userService.getUsers();
   }
 
-  login(email, password) {
-    this.userService.login(email, password).then(
+  // login(email, password) {
+  //   event.preventDefault();
+  //   this.userService.login(email, password).then(
+  //     (result) => {
+  //       // TODO: add here a router redirection to main page with the user credentials
+  //       // (result) ?
+  //       console.log('connected');
+  //     },
+  //   (err) => {
+  //     // Write an error through the alerting service
+  //     console.log('error:' + err);
+  //   });
+  // }
+
+  onSubmit(userloginForm:any, event:Event) {
+    event.preventDefault();
+    this.userService.login(userloginForm.email, userloginForm.password).then(
       (result) => {
         // TODO: add here a router redirection to main page with the user credentials
         // (result) ?
+        console.log('connected');
       },
     (err) => {
       // Write an error through the alerting service
-
+      console.log('error:' + err);
     });
   }
 }

@@ -1,11 +1,11 @@
-<form id=userlogin (ngSubmit)="login(userEmail,userPassword)" >
+<form (ngSubmit)="onSubmit(userloginForm,$event)" #userloginForm="ngForm"  >
   <h1>התחברות לאתר</h1>
   <div>
     <input type="email" placeholder="משתמש:" #userEmail />
     <input type="password" placeholder="ססמא:" #userPassword />
   </div>
   <div>
-    <button type="submit">היכנס</button>
+    <button type="submit" ngSu>היכנס</button>
   </div>
-  <div ng-hide="errorConnecting">שם משתמש או ססמא לא נכונים !</div>
+  <div [hidden]="errorConnecting">שם משתמש או ססמא לא נכונים !</div>
 </form>
