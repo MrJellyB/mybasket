@@ -1,8 +1,8 @@
-<form (ngSubmit)="onSubmit(userloginForm,$event)" #userloginForm="ngForm"  >
+<form (ngSubmit)="onSubmit(f,$event)" #f="ngForm"  >
   <h1>התחברות לאתר</h1>
   <div>
-    <input type="email" placeholder="משתמש:" #userEmail />
-    <input type="password" placeholder="ססמא:" #userPassword />
+    <input type="email" placeholder="משתמש:" name="userName" [(ngModel)]="model.userName" #userName="ngModel" />
+    <input type="password" placeholder="ססמא:" name="password" [(ngModel)]="model.password"  #password="ngModel" />
   </div>
   <div>
     <button type="submit" ngSu>היכנס</button>

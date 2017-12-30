@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersServiceService } from '../users-service.service';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-user-login',
@@ -9,6 +10,7 @@ import { UsersServiceService } from '../users-service.service';
 export class UserLoginComponent implements OnInit {
 
   errorConnecting:boolean;
+  model:any = {};
 
   constructor(private userService: UsersServiceService) {
     this.errorConnecting = false;
@@ -34,7 +36,10 @@ export class UserLoginComponent implements OnInit {
 
   onSubmit(userloginForm:any, event:Event) {
     event.preventDefault();
-    this.userService.login(userloginForm.email, userloginForm.password).then(
+
+    console.log(this.model);
+
+    this.userService.login(this.model.userName, this.model.password).subscribe(
       (result) => {
         // TODO: add here a router redirection to main page with the user credentials
         // (result) ?
