@@ -13,35 +13,36 @@ export class UsersServiceService {
 
   constructor(private http:Http) { }
 
+  getOptions(): any {
+    let header: HttpHeaders = new HttpHeaders().append("Content-Type", "application/json;charset=utf-8");
+    let headers: Headers =
+      new Headers(
+        [{
+          "Origin": "http://localhost:420dsada0",
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Headers": "*"
+        }]
+      );
+    let reqOptions: RequestOptions = new RequestOptions();
+    reqOptions.headers = headers;
+    return reqOptions;
+  }
+
   getUsers(): User[] {
     return USERS;
   }
 
   login(userName:string, password:string) : Observable<Response> {
-    // TODO: add here the http call to the server (meanwhile make a mock)
-    // return (environment.production) ?
     let body = new FormData();
     body.append('email', userName);
     body.append('password', password);
-    let header: HttpHeaders = new HttpHeaders();
-    header.append("Content-Type", "application/json;charset=utf-8");
-    var headers: Headers =
-    new Headers(
-    [{
-      "Origin": "http://localhost:420dsada0",
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Headers": "*"
-    }]
-    );
-    var reqOptions: RequestOptions = new RequestOptions();
-    reqOptions.headers = headers;
     return this.http.post(
       'http://localhost:8080/login',
       {
         "email": userName,
         "password": password
       },
-      reqOptions
+      this.getOptions()
     ).map((data) => data.json());
   }
 
