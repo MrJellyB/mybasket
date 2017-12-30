@@ -19,7 +19,8 @@ export class RegisterUserComponent implements OnInit {
   ngOnInit() {
   }
 
-  register() {
+  onSubmit(f: any, event: Event) {
+    event.preventDefault();
     this.loading = true;
     /*
     this.userService.register().then(
