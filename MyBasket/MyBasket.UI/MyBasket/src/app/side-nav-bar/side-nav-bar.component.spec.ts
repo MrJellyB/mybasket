@@ -1,19 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { RegisterUserComponent } from './register-user.component';
 
-describe('RegisterUserComponent', () => {
-  let component: RegisterUserComponent;
-  let fixture: ComponentFixture<RegisterUserComponent>;
+import { SideNavBarComponent } from './side-nav-bar.component';
+
+describe('SideNavBarComponent', () => {
+  let component: SideNavBarComponent;
+  let fixture: ComponentFixture<SideNavBarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RegisterUserComponent ]
+      declarations: [ SideNavBarComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RegisterUserComponent);
+    fixture = TestBed.createComponent(SideNavBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

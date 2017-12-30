@@ -1,4 +1,20 @@
 
+
+<div>
+  <div class="col-md-6 col-md-offset-3">
+    <h1>הרשמה לאתר</h1>
+    <h2>פרטים בסיסיים</h2>
+      <form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+        <div class="form-group">
+          <label for="firstName">שם פרטי</label>
+          <input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel" required />
+          <div *ngIf="f.submitted && !firstName.valid" class="help-block">First Name is required</div>
+        </div>
+      </form>
+  </div>
+</div>
+
+
 <!--
 <div class="col-md-6 col-md-offset-3">
   <h2>Register</h2>
@@ -30,4 +46,6 @@
     </div>
   </form>
 </div>
-    -->
+
+
+-->
