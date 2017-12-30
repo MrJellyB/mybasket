@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { LoginModule } from './modules/login/login.module';
+import { AppRoutingModule } from './shared/app-routing/app-routing.module';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { LoginModule } from './modules/login/login.module';
   imports: [
     HttpModule,
     BrowserModule,
-    LoginModule
+    LoginModule,
+    AppRoutingModule
   ],
   bootstrap: [AppComponent]
 })
