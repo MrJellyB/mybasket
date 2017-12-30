@@ -10,7 +10,7 @@ var database = {};
 
 var users = [];
 
-var userCollections = {};
+var collections = {};
 
 var url = 'mongodb://localhost:27017';
 
@@ -32,7 +32,7 @@ var setupToDb = function(url) {
 
         database = client.db('test');
 
-        userCollections = database.collection('users');
+        collections = database.collection('aaa');
     })
 }
 
@@ -40,9 +40,9 @@ var setupToDb = function(url) {
 setupToDb(url);
 
 
-app.get('/getUsers', function(req, res) {
+app.get('/check', function(req, res) {
     var users = [];
-    userCollections.find({}).toArray(function (err, result) {
+    collections.find({}).toArray(function (err, result) {
         if (err) throw err;
         console.log(result);
         res.send(result);
