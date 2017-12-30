@@ -4,6 +4,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { LoginModule } from './modules/login/login.module';
 import { AppRoutingModule } from './shared/app-routing/app-routing.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { AppRoutingModule } from './shared/app-routing/app-routing.module';
     HttpModule,
     BrowserModule,
     LoginModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   bootstrap: [AppComponent]
 })

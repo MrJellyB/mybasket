@@ -7,12 +7,14 @@ import { Headers, Http, Response, RequestOptions, RequestOptionsArgs } from '@an
 import { environment } from '../../../environments/environment'
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
+import { HttpService } from '../../shared/services/httpService/http.service';
 
 @Injectable()
 export class UsersServiceService {
 
-  constructor(private http:Http) { }
+  constructor(private http: Http, private httpService: HttpService) { }
 
+  /*
   getOptions(): any {
     let header: HttpHeaders = new HttpHeaders().append("Content-Type", "application/json;charset=utf-8");
     let headers: Headers =
@@ -26,23 +28,20 @@ export class UsersServiceService {
     let reqOptions: RequestOptions = new RequestOptions();
     reqOptions.headers = headers;
     return reqOptions;
-  }
+  }*/
 
   getUsers(): User[] {
     return USERS;
   }
 
   login(userName:string, password:string) : Observable<Response> {
-    let body = new FormData();
-    body.append('email', userName);
-    body.append('password', password);
     return this.http.post(
       'http://localhost:8080/login',
       {
         "email": userName,
         "password": password
       },
-      this.getOptions()
+      this.httpService.getOptions()
     ).map((data) => data.json());
   }
 
