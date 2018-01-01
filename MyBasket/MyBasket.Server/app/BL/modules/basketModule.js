@@ -25,3 +25,9 @@ exports.login = function (req, res) {
         res.send((data && Object.keys(data).length !== 0));
     })
 }
+
+exports.register = function (req, res) {
+    var data = req.body.data;
+    console.log(data);
+    dbUtils.register(data, function (err, data) { });
+}

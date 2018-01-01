@@ -41,3 +41,7 @@ exports.login = function (email, password, callback) {
 
     db.users.find({ "email": email, "password": password }).toArray(callback);
 }
+
+exports.register = function (data, callback) {
+    db.users.insert(data, callback);
+}

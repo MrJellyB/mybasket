@@ -6,5 +6,6 @@
     app.get('/getUsers', basketModule.getUsers);
     // app.get('/login/:email/:password', basketModule.login);
     app.post('/login', basketModule.login);
+    app.post('/register', basketModule.register);
 
 }

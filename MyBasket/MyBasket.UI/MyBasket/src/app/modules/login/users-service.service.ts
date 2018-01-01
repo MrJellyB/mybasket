@@ -14,21 +14,6 @@ export class UsersServiceService {
 
   constructor(private http: Http, private httpService: HttpService) { }
 
-  /*
-  getOptions(): any {
-    let header: HttpHeaders = new HttpHeaders().append("Content-Type", "application/json;charset=utf-8");
-    let headers: Headers =
-      new Headers(
-        [{
-          "Origin": "http://localhost:420dsada0",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Headers": "*"
-        }]
-      );
-    let reqOptions: RequestOptions = new RequestOptions();
-    reqOptions.headers = headers;
-    return reqOptions;
-  }*/
 
   getUsers(): User[] {
     return USERS;
@@ -45,7 +30,9 @@ export class UsersServiceService {
     ).map((data) => data.json());
   }
 
-  register(): Promise<boolean> {
-    return Promise.resolve(true);
+  register(data: any): Observable<Response> {
+    return this.http.post('http://localhost:8080/register',
+      { data },
+      this.httpService.getOptions()).map((data) => data.json());
   }
 }

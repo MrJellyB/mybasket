@@ -7,3 +7,8 @@ db.users.insert({id:4, name:"oren", email: "oren@gmail.com", password: "444444"}
 db.users.insert({id:5, name:"forte", email: "forte@gmail.com", password: "555555"})
 
 db.users.find({}).pretty()
+
+
+
+db.gender.insert({id:1, value:"male"})
+db.gender.insert({id:2, value:"female"})

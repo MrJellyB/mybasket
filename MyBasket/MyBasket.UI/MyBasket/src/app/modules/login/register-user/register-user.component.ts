@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsersServiceService } from '../users-service.service';
 import { FormGroup } from '@angular/forms';
+import { User } from '../../../shared/entities/User';
 
 
 @Component({
@@ -12,6 +13,7 @@ import { FormGroup } from '@angular/forms';
 export class RegisterUserComponent implements OnInit {
   model: any = {};
   loading = false;
+  user: User;
 
   constructor(private router: Router,
               private userService: UsersServiceService) { }
@@ -22,13 +24,15 @@ export class RegisterUserComponent implements OnInit {
   onSubmit(f: any, event: Event) {
     event.preventDefault();
     this.loading = true;
-    /*
-    this.userService.register().then(
-      (result) => {
-        // if successful
-      },
-      (err) => {
-        // if get error
-      });*/
+    this.user = new User();
+    this.user.id = this.model.id;
+    this.user.firstName = this.model.firstName;
+    this.user.lastName = this.model.lastName;
+    this.user.email = this.model.email;
+    this.user.gender = +this.model.gender;
+    this.user.password = this.model.password;
+    this.user.userName = this.model.userName;
+
+    this.userService.register(this.user).subscribe(results =>{ }, err => { })
   }
 }
