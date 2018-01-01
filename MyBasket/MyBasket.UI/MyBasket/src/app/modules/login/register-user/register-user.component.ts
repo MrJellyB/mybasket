@@ -5,6 +5,7 @@ import { FormGroup } from '@angular/forms';
 import { User } from '../../../shared/entities/User';
 
 
+
 @Component({
   selector: 'app-register-user',
   templateUrl: './register-user.component.html',
@@ -14,6 +15,7 @@ export class RegisterUserComponent implements OnInit {
   model: any = {};
   loading = false;
   user: User;
+  passIndication = true;
 
   constructor(private router: Router,
               private userService: UsersServiceService) { }
@@ -23,16 +25,28 @@ export class RegisterUserComponent implements OnInit {
 
   onSubmit(f: any, event: Event) {
     event.preventDefault();
-    this.loading = true;
-    this.user = new User();
-    this.user.id = this.model.id;
-    this.user.firstName = this.model.firstName;
-    this.user.lastName = this.model.lastName;
-    this.user.email = this.model.email;
-    this.user.gender = +this.model.gender;
-    this.user.password = this.model.password;
-    this.user.userName = this.model.userName;
 
-    this.userService.register(this.user).subscribe(results =>{ }, err => { })
+    if (this.model.password == this.model.repeatPassword) {
+      this.passIndication = false;
+      this.loading = true;
+      this.user = new User();
+      this.user.id = this.model.id;
+      this.user.firstName = this.model.firstName;
+      this.user.lastName = this.model.lastName;
+      this.user.email = this.model.email;
+      this.user.gender = +this.model.gender;
+      this.user.password = this.model.password;
+      this.user.userName = this.model.userName;
+      this.userService.register(this.user).subscribe(
+        (results) =>
+        {
+          this.router.navigate(['/login']);
+        }
+        ,
+        err =>
+        {
+
+        })
+    }
   }
 }

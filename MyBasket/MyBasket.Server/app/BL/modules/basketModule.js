@@ -29,5 +29,5 @@ exports.login = function (req, res) {
 exports.register = function (req, res) {
     var data = req.body.data;
     console.log(data);
-    dbUtils.register(data, function (err, data) { });
+    dbUtils.register(data, function (err, data) { res.send(true)});
 }

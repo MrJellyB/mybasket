@@ -57,7 +57,12 @@
             <input type="text" class="form-control" name="repeatPassword" [(ngModel)]="model.repeatPassword" #repeatPassword="ngModel" required />
           </div>
 
+          <div *ngIf="model.repeatPassword != model.password">
+            <label>סיסמא לא תואמת</label>
+          </div>
+
           <button [disabled]="loading" class="btn btn-primary">הירשם לאתר</button>
+          
 </form>
   </div>
 </div>
