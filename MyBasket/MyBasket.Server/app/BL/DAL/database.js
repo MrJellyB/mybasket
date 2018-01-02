@@ -37,8 +37,6 @@ exports.getUsers = function (callback) {
 }
 
 exports.login = function (email, password, callback) {
-    console.log("email= " + email + " and password= " + password);
-
     db.users.find({ "email": email, "password": password }).toArray(callback);
 }
 

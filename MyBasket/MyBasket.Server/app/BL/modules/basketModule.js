@@ -19,15 +19,11 @@ exports.login = function (req, res) {
     var password = req.body.password;
 
     dbUtils.login(email, password, function (err, data) {
-        //res.send(data);
-
-        // res.writeHead(200, {"Access-Control-Allow-Origin": "*"});
         res.send((data && Object.keys(data).length !== 0));
     })
 }
 
 exports.register = function (req, res) {
     var data = req.body.data;
-    console.log(data);
     dbUtils.register(data, function (err, data) { res.send(true)});
 }
