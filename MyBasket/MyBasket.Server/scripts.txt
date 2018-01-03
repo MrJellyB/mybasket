@@ -10,5 +10,6 @@ db.users.find({}).pretty()
 
 
 
+
 db.gender.insert({id:1, value:"male"})
 db.gender.insert({id:2, value:"female"})
