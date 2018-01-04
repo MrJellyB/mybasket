@@ -7,4 +7,6 @@ export class CategoryService {
 
   constructor(private httpService:HttpService) { }
 
+  //getAllCategories:
+
 }
