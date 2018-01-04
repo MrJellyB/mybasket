@@ -43,3 +43,7 @@ exports.login = function (email, password, callback) {
 exports.register = function (data, callback) {
     db.users.insert(data, callback);
 }
+
+exports.getCategories = function(callback) {
+    
+}
