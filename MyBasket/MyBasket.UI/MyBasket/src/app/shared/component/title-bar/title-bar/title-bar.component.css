@@ -20,6 +20,11 @@
     margin-left: 5px;
 }
 
+#lnkSign:hover
+{
+    cursor: pointer;
+}
+
 #spnCartIcon
 {
     margin-left: 5px;
@@ -33,4 +38,11 @@
 .td
 {
     width: 50%;
+    align-content: center;
+    text-align: center; 
+}
+
+#divCartDiv:hover
+{
+    cursor: pointer;
 }
