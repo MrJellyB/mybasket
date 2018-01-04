@@ -7,5 +7,6 @@
     // app.get('/login/:email/:password', basketModule.login);
     app.post('/login', basketModule.login);
     app.post('/register', basketModule.register);
+    app.get('/getCategories', basketModule.getCategories);
 
 }

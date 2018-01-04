@@ -27,3 +27,7 @@ exports.register = function (req, res) {
     var data = req.body.data;
     dbUtils.register(data, function (err, data) { res.send(true)});
 }
+
+exports.getCategories = function(req, res) {
+    
+}
