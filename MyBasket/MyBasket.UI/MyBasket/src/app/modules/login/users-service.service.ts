@@ -14,11 +14,6 @@ export class UsersServiceService {
 
   constructor(private http: Http, private httpService: HttpService) { }
 
-
-  getUsers(): User[] {
-    return USERS;
-  }
-
   login(userName:string, password:string) : Observable<Response> {
     return this.http.post(
       'http://localhost:8080/login',
