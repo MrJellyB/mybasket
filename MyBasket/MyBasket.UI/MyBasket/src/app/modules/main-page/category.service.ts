@@ -9,10 +9,10 @@ export class CategoryService {
 
   constructor(private httpService:HttpService) { }
 
-  getAllCategories(): Observable<Category[]> {
+  getAllCategories(): Observable<Response> {
     return this.httpService.http.get(
       'http://localhost:8080/getCategories'
-    ).map((data) => Category.toCategories(data));
+    ).map((data) => data.json());
   }
 
 }

@@ -9,11 +9,11 @@ export class Category {
 
 
   public static toCategories(data:any){
-    let jsonData = JSON.parse(data);
+    // let jsonData = JSON.parse(data); We don't need to parse this
 
     let categories: Array<Category> = new Array<Category>();
 
-    jsonData.forEach(element => {
+    data.forEach(element => {
       categories.push(new Category(element.id, element.name));
     });
 

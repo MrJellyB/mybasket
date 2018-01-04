@@ -16,7 +16,8 @@ export class MainNavBarComponent implements OnInit {
     let categories: Category[];
     this.categortService.getAllCategories().subscribe(
       (data) => {
-        this.categories = data;
+        this.categories = Category.toCategories(data);
+        console.log(data);
       },
       (error) => {
         console.log("error on getting categories:" + error);
