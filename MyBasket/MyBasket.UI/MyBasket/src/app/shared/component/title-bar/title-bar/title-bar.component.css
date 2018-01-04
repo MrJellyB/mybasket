@@ -6,6 +6,31 @@
 
 #divTitleDiv
 {
-    text-align: center;
     align-content: center;
+    text-align: center; 
+}
+
+#lblHello
+{
+    margin-right: 5px;
+}
+
+#lnkSign
+{
+    margin-left: 5px;
+}
+
+#spnCartIcon
+{
+    margin-left: 5px;
+}
+
+#tblTitleBarTable
+{
+    width: 100%;
+}
+
+.td
+{
+    width: 50%;
 }
