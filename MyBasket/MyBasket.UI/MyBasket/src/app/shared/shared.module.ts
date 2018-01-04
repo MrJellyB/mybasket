@@ -11,6 +11,6 @@ import { HttpService } from './services/httpService/http.service';
   ],
   providers: [HttpService],
   bootstrap: [],
-  exports: []
+  exports: [MainNavBarComponent, SideNavBarComponent]
 })
 export class SharedModule { }
