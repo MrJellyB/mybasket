@@ -6,6 +6,28 @@
 
 #divTitleDiv
 {
-    text-align: center;
     align-content: center;
+    text-align: center; 
+}
+
+#lnkSign:hover
+{
+    cursor: pointer;
+}
+
+#tblTitleBarTable
+{
+    width: 100%;
+}
+
+.title-bar-td
+{
+    width: 50%;
+    align-content: center;
+    text-align: center;
+}
+
+#divCartDiv:hover
+{
+    cursor: pointer;
 }

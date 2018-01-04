@@ -2,22 +2,39 @@
 
   <img id="imgSystemLogo" src="assets\img\MyBasketLogo.png" >
 
+</div>
+
 <br />
 
-<table>
+<table id="tblTitleBarTable" colspan="2">
   <tr>
-    <td>
-      <label id="lblHello" class="title-label-class">שלום אור פורטה</label>
-    </td>
-    <td>
-      <a id="lnkSign" class="title-label-class">יציאה</a>
-    </td>
+      <td class="title-bar-td">
+          <label id="lblHello" class="title-label-class">שלום אור פורטה,</label>
+      </td>
+      <td class="title-bar-td">
+          <a id="lnkSign" class="title-label-class">יציאה</a>
+      </td>
   </tr>
   <tr>
-    <td>
-      <span class="glyphicon glyphicon-shopping-cart"></span>
+      <td class="title-bar-td">
+      </td>
+      <td class="title-bar-td">
+        <div id="divCartDiv">
+          <span id=spnCartIcon class="glyphicon glyphicon-shopping-cart"></span>
+          <label id="lblProductAmount" class="title-label-class">20</label>
+        </div>
+      </td>
+  </tr>
+  <tr>
+    <td class="title-bar-td">
+        <button type="button" id="btnBuidBasket" class="btn btn-primary">הרכב חבילה</button>
+    </td>
+    <td class="title-bar-td">
+
     </td>
   </tr>
 </table>
 
-</div>
+<br />
+
+

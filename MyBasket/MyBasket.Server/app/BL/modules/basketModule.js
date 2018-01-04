@@ -29,5 +29,5 @@ exports.register = function (req, res) {
 }
 
 exports.getCategories = function(req, res) {
-    
+    dbUtils.getCategories(function(err, data) { res.send(data); });
 }
