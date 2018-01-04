@@ -1,0 +1,15 @@
+#divMainDiv
+{
+    align-content: center;
+    text-align: center; 
+}
+
+.main-page-link:hover
+{
+    cursor: pointer;
+}
+
+.main-page-link-par
+{
+    font-size: 18px;
+}
