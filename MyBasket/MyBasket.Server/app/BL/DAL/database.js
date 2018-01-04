@@ -6,7 +6,7 @@ var mongoClient = mongodb.MongoClient;
 var bodyParser = require('body-parser');
 var consts = null;
 
-var collections = ['users'];
+var collections = ['users', 'categories'];
 
 // log on to db
 exports.setupDB = function (dbUrl, con, p_db, callback) {
@@ -45,5 +45,5 @@ exports.register = function (data, callback) {
 }
 
 exports.getCategories = function(callback) {
-    
+    db.categories.find({}).toArray(callback);
 }
