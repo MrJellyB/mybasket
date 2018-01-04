@@ -7,7 +7,7 @@ import 'rxjs/Rx';
 @Injectable()
 export class HttpService {
 
-  constructor(private http: Http) { }
+  constructor(public http: Http) { }
 
   getOptions(): any {
     let header: HttpHeaders = new HttpHeaders().append("Content-Type", "application/json;charset=utf-8");
