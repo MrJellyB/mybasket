@@ -7,13 +7,15 @@ import { SideNavBarComponent } from '../component/side-nav-bar/side-nav-bar.comp
 import { MainNavBarComponent } from '../component/main-nav-bar/main-nav-bar.component';
 import { MainPageComponent } from '../../modules/main-page/main-page/main-page.component';
 import { ProfileBuilderComponent } from '../../modules/login/profile-builder/profile-builder.component'
+import { ProductDetailsComponent } from '../../modules/main-page/product-details/product-details.component'
 
 export const routes:Routes = [
   { path: 'login', component: UserLoginComponent },
   { path: 'register', component: RegisterUserComponent },
   { path: 'left-nav-bar', component: SideNavBarComponent },
   { path: 'top-nav-bar', component: MainNavBarComponent },
-  { path: 'main-page', component: MainPageComponent },
+  { path: 'main-page', component:MainPageComponent },
+  { path: 'product', component:ProductDetailsComponent },
   { path: 'profile-builder', component: ProfileBuilderComponent}
 ];
 
