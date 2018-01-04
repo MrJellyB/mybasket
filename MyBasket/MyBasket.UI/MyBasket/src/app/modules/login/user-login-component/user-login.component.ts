@@ -18,7 +18,6 @@ export class UserLoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userService.getUsers();
   }
 
   onSubmit(userloginForm:any, event:Event) {
