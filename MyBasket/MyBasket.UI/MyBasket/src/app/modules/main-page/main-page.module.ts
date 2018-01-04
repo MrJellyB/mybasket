@@ -9,6 +9,6 @@ import { MainPageComponent } from './main-page/main-page.component';
   ],
   providers: [],
   bootstrap: [],
-  exports: [MainPageComponent]
+  exports: []
 })
 export class MainPageModule { }
