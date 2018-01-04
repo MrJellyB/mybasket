@@ -1,10 +1,18 @@
 db.users.remove({})
+db.categories.remove({})
 
 db.users.insert({id:1, name:"lior", email: "lior@gmail.com", password: "111111"})
 db.users.insert({id:2, name:"noam", email: "noam@gmail.com", password: "222222"})
 db.users.insert({id:3, name:"sapir", email: "sapir@gmail.com", password: "333333"})
 db.users.insert({id:4, name:"oren", email: "oren@gmail.com", password: "444444"})
 db.users.insert({id:5, name:"forte", email: "forte@gmail.com", password: "555555"})
+
+db.categories.insert({id:1, name:"כשרות"})
+db.categories.insert({id:2, name:"קפואים"})
+db.categories.insert({id:3, name:"סגנון בריאות"})
+db.categories.insert({id:4, name:"חטיפים"})
+db.categories.insert({id:5, name:"דגים"})
+db.categories.insert({id:6, name:"בשר"})
 
 db.users.find({}).pretty()
 
