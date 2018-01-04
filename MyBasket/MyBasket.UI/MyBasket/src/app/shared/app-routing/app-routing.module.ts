@@ -8,6 +8,7 @@ import { MainNavBarComponent } from '../component/main-nav-bar/main-nav-bar.comp
 import { MainPageComponent } from '../../modules/main-page/main-page/main-page.component';
 import { ProfileBuilderComponent } from '../../modules/login/profile-builder/profile-builder.component'
 import { ProductDetailsComponent } from '../../modules/main-page/product-details/product-details.component'
+import {SearchProductsComponent} from '../../modules/main-page/search-products/search-products.component'
 
 export const routes:Routes = [
   { path: 'login', component: UserLoginComponent },
@@ -17,6 +18,8 @@ export const routes:Routes = [
   { path: 'main-page', component:MainPageComponent },
   { path: 'product', component:ProductDetailsComponent },
   { path: 'profile-builder', component: ProfileBuilderComponent}
+  { path: 'search-products', component: SearchProductsComponent}
+
 ];
 
 @NgModule({
