@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
     "bootstrap": "^3.3.7",
+    "bootstrap-rtl": "^3.3.4",
     "core-js": "^2.4.1",
     "dummy-json": "^2.0.0",
     "fs": "^0.0.1-security",
