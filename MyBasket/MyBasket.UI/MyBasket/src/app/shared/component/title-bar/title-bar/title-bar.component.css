@@ -10,24 +10,9 @@
     text-align: center; 
 }
 
-#lblHello
-{
-    margin-right: 5px;
-}
-
-#lnkSign
-{
-    margin-left: 5px;
-}
-
 #lnkSign:hover
 {
     cursor: pointer;
-}
-
-#spnCartIcon
-{
-    margin-left: 5px;
 }
 
 #tblTitleBarTable
@@ -35,11 +20,11 @@
     width: 100%;
 }
 
-.td
+.title-bar-td
 {
     width: 50%;
     align-content: center;
-    text-align: center; 
+    text-align: center;
 }
 
 #divCartDiv:hover
