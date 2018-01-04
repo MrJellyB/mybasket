@@ -17,7 +17,7 @@ export const routes:Routes = [
   { path: 'top-nav-bar', component: MainNavBarComponent },
   { path: 'main-page', component:MainPageComponent },
   { path: 'product', component:ProductDetailsComponent },
-  { path: 'profile-builder', component: ProfileBuilderComponent}
+  { path: 'profile-builder', component: ProfileBuilderComponent},
   { path: 'search-products', component: SearchProductsComponent}
 
 ];
