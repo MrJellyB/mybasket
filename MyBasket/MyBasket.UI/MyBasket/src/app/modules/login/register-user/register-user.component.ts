@@ -21,6 +21,8 @@ export class RegisterUserComponent implements OnInit {
               private userService: UsersServiceService) { }
 
   ngOnInit() {
+    // setting the gender as male
+    this.model.gender = 1;
   }
 
   onSubmit(f: any, event: Event) {

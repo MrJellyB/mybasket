@@ -2,7 +2,7 @@
 
 
 <div>
-  <div class="col-md-5 col-md-offset-6">
+  <div class="col-md-2 col-md-offset-9">
     <h2>הרשמה לאתר</h2>
     <h3>פרטים בסיסיים</h3>
       <form name="form" (ngSubmit)="f.form.valid && onSubmit(f,$event)" #f="ngForm" novalidate>
@@ -15,8 +15,10 @@
           <input type="text" class="form-control" name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" required />
         </div>
 
+      
         <div class="form-group">
-          <select  name="gender" [(ngModel)]="model.gender" #gender="ngModel">
+          <label for="gender">מין</label>
+          <select name="gender" [(ngModel)]="model.gender" #gender="ngModel" class="form-control">
             <option value="1" selected>זכר</option>
             <option value="2">נקבה</option>
           </select>
