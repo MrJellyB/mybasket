@@ -31,6 +31,8 @@ export class UserLoginComponent implements OnInit {
         if (result) {
           this.isCurrentDetails = "התחבר למשתמש";
           this.errorConnecting = false;
+          alert('נרשמת לאתר בהצלחה');
+
         }
         else {
           this.isCurrentDetails = "פרטי המשתמש שגויים";

@@ -2,7 +2,7 @@
 
 
 <div>
-  <div class="col-md-2 col-md-offset-9">
+  <div class="col-md-3 col-md-offset-1">
     <h2>הרשמה לאתר</h2>
     <h3>פרטים בסיסיים</h3>
       <form name="form" (ngSubmit)="f.form.valid && onSubmit(f,$event)" #f="ngForm" novalidate>
@@ -24,20 +24,6 @@
           </select>
         </div>
 
-          <!--
-    <div class="form-group">
-      <label for="gender">מין</label>
-      <input type="radio" id="male"
-             name="contact" value="1" [(ngModel)]="model.male" #male="ngModel">
-      <label for="male">זכר</label>
-
-      <input type="radio" id="female"
-             name="contact" value="2" [(ngModel)]="model.female" #female="ngModel">
-      <label for="female">נקבה</label>
-    </div>-->
-          <!--
-    <label class="checkbox-inline"><input type="checkbox" value="">זכר</label>
-    <label class="checkbox-inline"><input type="checkbox" value="">נקבה</label>-->
           <h3>התחברות לאתר</h3>
           <div class="form-group">
             <label for="username">שם משתמש</label>
@@ -51,12 +37,12 @@
 
           <div class="form-group">
             <label for="password">סיסמא</label>
-            <input type="text" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+            <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" required />
           </div>
 
           <div class="form-group">
             <label for="repeatPassword">חזור על הסיסמא</label>
-            <input type="text" class="form-control" name="repeatPassword" [(ngModel)]="model.repeatPassword" #repeatPassword="ngModel" required />
+            <input type="password" class="form-control" name="repeatPassword" [(ngModel)]="model.repeatPassword" #repeatPassword="ngModel" required />
           </div>
 
           <div *ngIf="model.repeatPassword != model.password">
