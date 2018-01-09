@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { UsersServiceService } from '../users-service.service';
 import { FormGroup } from '@angular/forms';
 import { User } from '../../../shared/entities/User';
+import { } from ''
 
 
 
@@ -42,6 +43,7 @@ export class RegisterUserComponent implements OnInit {
       this.userService.register(this.user).subscribe(
         (results) =>
         {
+          alert('נרשמת לאתר בהצלחה');
           this.router.navigate(['/login']);
         }
         ,
