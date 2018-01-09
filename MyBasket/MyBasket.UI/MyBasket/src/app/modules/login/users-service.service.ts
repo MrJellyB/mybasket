@@ -22,7 +22,15 @@ export class UsersServiceService {
         "password": password
       },
       this.httpService.getOptions()
-    ).map((data) => data.json());
+    ).map((data) => {
+
+      // TODO: we need to respond here a token from the server
+      if(data && data.ok) {
+        localStorage.setItem('currentUser', userName);
+      }
+
+      return data.json();
+    });
   }
 
   register(data: any): Observable<Response> {
