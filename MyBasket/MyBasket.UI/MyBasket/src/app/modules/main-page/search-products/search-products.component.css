@@ -30,7 +30,7 @@
     border:1px solid #009999;
     align-content: center;
     text-align: center; 
-    margin-right: 3%;
+    margin-right: 35px;
 }
 .results-row 
 {
@@ -47,4 +47,17 @@
     border:1px solid #009999;
     align-content: center;
     text-align: center; 
+}
+
+.product-title
+{
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.product-img
+{
+    margin-bottom: 5px;
+    width: 130px;
+    height: 130px;
 }
