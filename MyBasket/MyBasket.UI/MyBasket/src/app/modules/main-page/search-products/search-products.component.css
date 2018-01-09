@@ -1,0 +1,17 @@
+#divSearchTitle
+{
+    align-content: center;
+    text-align: center; 
+    margin: 0 auto;
+    float: none;
+}
+
+#lblSearchTitle
+{
+    font-size: 24px;
+}
+
+#txtSearch
+{
+    width: 250px;
+}
