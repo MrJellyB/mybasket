@@ -5,12 +5,14 @@ import { UserLoginComponent } from './user-login-component/user-login.component'
 import { UsersServiceService } from './users-service.service';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import { ProfileBuilderComponent } from './profile-builder/profile-builder.component';
+import { AppRoutingModule } from '../../shared/app-routing/app-routing.module';
 
 @NgModule({
   declarations: [UserLoginComponent, RegisterUserComponent, ProfileBuilderComponent],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [UsersServiceService],
   bootstrap: [],
