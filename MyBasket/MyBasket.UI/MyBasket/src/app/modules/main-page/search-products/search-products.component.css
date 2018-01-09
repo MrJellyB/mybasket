@@ -2,8 +2,6 @@
 {
     align-content: center;
     text-align: center; 
-    margin: 0 auto;
-    float: none;
 }
 
 #lblSearchTitle
@@ -14,4 +12,12 @@
 #txtSearch
 {
     width: 250px;
+}
+
+#divSearchResultsPanel
+{
+    align-content: center;
+    text-align: center; 
+    width: 1000px;
+    margin-right: 15%;
 }
