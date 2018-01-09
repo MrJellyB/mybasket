@@ -25,7 +25,7 @@ export class UsersServiceService {
     ).map((data) => {
 
       // TODO: we need to respond here a token from the server
-      if(data && data.ok) {
+      if(data && data.json() === true) {
         localStorage.setItem('currentUser', userName);
       }
 
