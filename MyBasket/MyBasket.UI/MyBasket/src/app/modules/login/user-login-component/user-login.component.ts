@@ -21,6 +21,10 @@ export class UserLoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  userName() {
+    return localStorage.getItem('currentUser');
+  }
+
   onSubmit(userloginForm:any, event:Event) {
     event.preventDefault();
 
@@ -33,7 +37,7 @@ export class UserLoginComponent implements OnInit {
           this.isCurrentDetails = "התחבר למשתמש";
           this.errorConnecting = false;
           alert('התחברת לאתר בהצלחה');
-          this.router.navigate(['/']);
+          this.router.navigate(['/main-page']);
         }
         else {
           this.isCurrentDetails = "פרטי המשתמש שגויים";

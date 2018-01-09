@@ -26,6 +26,10 @@ export class RegisterUserComponent implements OnInit {
     this.model.gender = 1;
   }
 
+  userName() {
+    return localStorage.getItem('currentUser');
+  }
+
   onSubmit(f: any, event: Event) {
     event.preventDefault();
 

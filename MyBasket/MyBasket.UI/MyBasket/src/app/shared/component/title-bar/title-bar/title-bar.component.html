@@ -1,40 +1,40 @@
-<div id="divTitleDiv">
+<div *ngIf="userName()" >
 
-  <img id="imgSystemLogo" src="assets\img\MyBasketLogo.png" >
 
-</div>
+  <div id="divTitleDiv">
 
-<br />
+    <img id="imgSystemLogo" src="assets\img\MyBasketLogo.png">
 
-<table id="tblTitleBarTable" colspan="2">
-  <tr>
+  </div>
+
+  <br />
+
+  <table id="tblTitleBarTable" colspan="2">
+    <tr>
       <td class="title-bar-td">
-          <label id="lblHello" class="title-label-class">שלום אור פורטה,</label>
+        <label id="lblHello" class="title-label-class">שלום {{userName()}}</label>
       </td>
       <td class="title-bar-td">
-          <a id="lnkSign" class="title-label-class">יציאה</a>
+        <a id="lnkSign" class="title-label-class" (click)="logout()">יציאה</a>
       </td>
-  </tr>
-  <tr>
-      <td class="title-bar-td">
-      </td>
+    </tr>
+    <tr>
+      <td class="title-bar-td"></td>
       <td class="title-bar-td">
         <div id="divCartDiv">
           <span id=spnCartIcon class="glyphicon glyphicon-shopping-cart"></span>
           <label id="lblProductAmount" class="title-label-class">20</label>
         </div>
       </td>
-  </tr>
-  <tr>
-    <td class="title-bar-td">
+    </tr>
+    <tr>
+      <td class="title-bar-td">
         <button type="button" id="btnBuidBasket" class="btn btn-primary">הרכב חבילה</button>
-    </td>
-    <td class="title-bar-td">
+      </td>
+      <td class="title-bar-td"></td>
+    </tr>
+  </table>
 
-    </td>
-  </tr>
-</table>
+  <br />
 
-<br />
-
-
+</div>

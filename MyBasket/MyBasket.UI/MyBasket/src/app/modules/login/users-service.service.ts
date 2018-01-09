@@ -38,4 +38,8 @@ export class UsersServiceService {
       { data },
       this.httpService.getOptions()).map((data) => data.json());
   }
+
+  logout() {
+    localStorage.removeItem('currentUser');
+  }
 }

@@ -1,4 +1,5 @@
 
+<div *ngIf="!userName()" >
 <div class="col-md-3 col-md-offset-1">
   <form (ngSubmit)="onSubmit(f,$event)" #f="ngForm">
     <h1>התחברות לאתר</h1>
@@ -16,4 +17,5 @@
     <div [hidden]="!errorConnecting">שם משתמש או ססמא לא נכונים !</div>
     <div>{{isCurrentDetails}}</div>
   </form>
+</div>
 </div>
