@@ -5,13 +5,14 @@ import { SideNavBarComponent } from './component/side-nav-bar/side-nav-bar.compo
 import { HttpService } from './services/httpService/http.service';
 import { TitleBarComponent } from './component/title-bar/title-bar/title-bar.component';
 import { CategoryService } from '../modules/main-page/category.service';
+import { AuthService } from './services/auth/auth.service';
 
 @NgModule({
   declarations: [MainNavBarComponent, SideNavBarComponent, TitleBarComponent],
   imports: [
     CommonModule
   ],
-  providers: [HttpService, CategoryService],
+  providers: [HttpService, CategoryService, AuthService],
   bootstrap: [],
   exports: [MainNavBarComponent, SideNavBarComponent, TitleBarComponent]
 })

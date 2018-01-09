@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersServiceService } from '../users-service.service';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-login',
@@ -13,7 +14,7 @@ export class UserLoginComponent implements OnInit {
   model: any = {};
   isCurrentDetails: string;
 
-  constructor(private userService: UsersServiceService) {
+  constructor(private userService: UsersServiceService, private router:Router) {
     this.errorConnecting = false;
   }
 
@@ -31,8 +32,8 @@ export class UserLoginComponent implements OnInit {
         if (result) {
           this.isCurrentDetails = "התחבר למשתמש";
           this.errorConnecting = false;
-          alert('נרשמת לאתר בהצלחה');
-
+          alert('התחברת לאתר בהצלחה');
+          this.router.navigate(['/']);
         }
         else {
           this.isCurrentDetails = "פרטי המשתמש שגויים";
