@@ -18,4 +18,8 @@ export class SideNavBarComponent implements OnInit {
   w3_close() {
     document.getElementById("mySidebar").style.display = "none";
   }
+
+  userName() {
+    return localStorage.getItem('currentUser');
+  }
 }
