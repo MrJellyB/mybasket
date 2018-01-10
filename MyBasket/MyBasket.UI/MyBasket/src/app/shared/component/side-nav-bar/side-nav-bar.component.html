@@ -9,13 +9,22 @@
 -->
 
 <!-- Sidebar -->
-<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-  <button (click)="w3_close()" class="w3-bar-item w3-large">סגור תפריט&times;</button>
-  <a href="#" class="w3-bar-item w3-button">My Basket, {{userName()}}</a>
-  <a href="#" class="w3-bar-item w3-button">הרכבת הסל שלי</a>
-  <a href="#" class="w3-bar-item w3-button">הוספת פריטים</a>
-  <a href="#" class="w3-bar-item w3-button">עידכון הפרופיל האישי</a>
-  <a href="#" class="w3-bar-item w3-button">התנתקות</a>
+<div *ngIf="userName()">
+  <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+    <button (click)="w3_close()" class="w3-bar-item w3-large">סגור תפריט&times;</button>
+    <a href="#" class="w3-bar-item w3-button">My Basket, {{userName()}}</a>
+    <a href="#" class="w3-bar-item w3-button">הרכבת הסל שלי</a>
+    <a href="#" class="w3-bar-item w3-button">הוספת פריטים</a>
+    <a href="#" class="w3-bar-item w3-button">עידכון הפרופיל האישי</a>
+    <a href="#" class="w3-bar-item w3-button">התנתקות</a>
+  </div>
+</div>
+<div *ngIf="userName() == null || userName() == ''">
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+      <button (click)="w3_close()" class="w3-bar-item w3-large">סגור תפריט&times;</button>
+      <a routerLink="/login" class="w3-bar-item w3-button" routerLinkActive="active">התחברות</a>
+      <a href="#" class="w3-bar-item w3-button">הרשמה</a>
+    </div>
 </div>
 
 <!-- Page Content -->
